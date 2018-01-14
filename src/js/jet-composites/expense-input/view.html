@@ -1,0 +1,31 @@
+<div class="oj-flex oj-flex-items-pad">
+
+  <div class="oj-sm-12 oj-md-3 oj-flex-item">
+    <oj-label for="expenseTypeSelect">Type of Expense</oj-label>
+    <oj-select-one id="expenseTypeSelect" value="{{$props.expenseType}}" style="max-width:20em">
+      <oj-option value="Accomodation">Accomodation</oj-option>
+      <oj-option value="Food">Food</oj-option>
+      <oj-option value="Parking">Parking</oj-option>
+      <oj-option value="Train">Train</oj-option>
+    </oj-select-one>
+  </div>
+
+  <div class="oj-sm-12 oj-md-3 oj-flex-item">
+    <oj-label for="expenseCost-input">Cost</oj-label>
+    <oj-input-text id="expenseCost-input" value="{{$props.expenseCost}}" converter= '{"type":"number", 
+      "options": {"style": "currency", "currency": "EUR", "currencyDisplay": "symbol"}}'></oj-input-text>
+  </div>
+
+  <div class="oj-sm-12 oj-md-3 oj-flex-item">
+    <oj-label for="taxrate-input">Taxrate</oj-label>
+    <oj-input-text id="taxrate-input" value="{{$props.taxrate}}" converter= '{"type":"number", 
+      "options": {"style": "percent", "maximumFractionDigits": "2", "useGrouping": "false"}}'></oj-input-text>
+  </div>
+
+  <div class="oj-sm-12 oj-md-3 oj-flex-item">
+    <oj-label for="tax-input">Tax</oj-label>
+    <oj-input-text id="tax-input" value="{{$props.tax}}" converter= '{"type":"number", 
+      "options": {"style": "currency", "currency": "EUR", "currencyDisplay": "symbol"}}' disabled></oj-input-text>
+  </div>
+
+</div>

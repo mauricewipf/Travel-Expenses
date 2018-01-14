@@ -1,0 +1,24 @@
+{
+    "name": "expense",
+    "description": "",
+    "version": "1.0.2",
+    "jetVersion": ">=3.0.0 <5.0.0",
+    "properties": {
+      "expenseType": {
+        "description": "",
+        "type": "string"
+      },
+      "expenseCost": {
+        "description": "",
+        "type": "number"
+      },
+      "taxrate": {
+        "description": "",
+        "type": "number"
+      },
+      "tax": {
+        "description": "",
+        "type": "number"
+      }
+    }
+  }

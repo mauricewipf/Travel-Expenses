@@ -1,0 +1,32 @@
+<!--
+ Copyright (c) 2014, 2017, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-hybrid-padding">
+  <h1>Add Travel Expenses</h1>
+
+  <div class="oj-flex oj-flex-items-pad">
+    <div class="oj-sm-12 oj-flex-item">
+      <oj-label for="travellerName-input">Name of Traveller</oj-label>
+      <oj-input-text id="travellerName-input" value="{{travellerName}}"></oj-input-text>    
+    </div>
+  </div>
+
+  <!-- ko foreach: expenses -->
+  <expense-input taxrate=[[taxrate]] expense-type=[[expenseType]] expense-cost=[[expenseCost]] tax=[[tax]]></expense-input>
+  <!-- /ko -->
+
+  <div class="oj-flex oj-flex-items-pad">
+    <div class="oj-sm-12 oj-flex-item">
+      <oj-button on-click='[[addExpense]]'>+ Add Expense</oj-button>
+    </div>    
+  </div>
+
+  <div class="oj-flex oj-flex-items-pad">
+    <div class="oj-sm-12 oj-flex-item">
+      <oj-button on-click='[[save]]'>Save</oj-button>
+      <oj-button on-click='[[reject]]'>Reject</oj-button>
+    </div>
+  </div>
+
+</div>
