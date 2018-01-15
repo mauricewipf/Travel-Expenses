@@ -16,7 +16,12 @@ define(['knockout'],
       return (self.expenseCost() - self.expenseCost()/(1+self.taxrate()));
     }, this);
 
-}
+    self.deleteExpense = function() {
+      // TODO
+    };
+
+
+  }
 
     return model;
   }

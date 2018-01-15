@@ -36,6 +36,14 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojinputtext', 'ojs/ojlabel',
         }
       ]);
 
+      self.travelSum = ko.computed(function() {
+        var sum = 0;
+        for(var i=0; i<self.expenses().length; i++) {
+          sum += self.expenses()[i].expenseCost;
+        }
+        return sum;
+      }, this);
+
       self.addExpense = function() {
         self.expenses.push({
           expenseType: null,
@@ -48,10 +56,10 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojinputtext', 'ojs/ojlabel',
       self.save = function() {
         // Store data into database
         console.log("Saved");
-        // self.expenses.removeAll();
+        self.expenses.removeAll();
       }
 
-      self.reject = function() {
+      self.cancel = function() {
         self.expenses.removeAll();
       }
 

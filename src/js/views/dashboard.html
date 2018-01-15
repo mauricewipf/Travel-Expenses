@@ -24,8 +24,17 @@
 
   <div class="oj-flex oj-flex-items-pad">
     <div class="oj-sm-12 oj-flex-item">
+      <oj-label for="tax-input">Sum</oj-label>
+      <oj-input-text id="tax-input" value="[[travelSum]]" converter='{"type":"number", 
+        "options": {"style": "currency", "currency": "EUR", "currencyDisplay": "symbol"}}' disabled></oj-input-text>
+    </div>
+  </div>
+
+
+  <div class="oj-flex oj-flex-items-pad">
+    <div class="oj-sm-12 oj-flex-item">
       <oj-button on-click='[[save]]'>Save</oj-button>
-      <oj-button on-click='[[reject]]'>Reject</oj-button>
+      <oj-button on-click='[[cancel]]'>Cancel</oj-button>
     </div>
   </div>
 
